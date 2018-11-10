@@ -122,7 +122,7 @@
                 <!--recommended_items-->
                 <h2 class="title">Résultats de la recherche : 551 produits trouvés</h2>
 
-                <div class="col-lg-2 col-xs-4">
+                <div class="col-lg-2 col-xs-12">
                     <?php
                     $facets = [
                         [
@@ -150,7 +150,7 @@
                             <div class="panel-heading">
                                 <?php echo $facet['name'] ;  ?>
                             </div>
-                            <div class="panel-body">
+                            <div class="text-center panel-body">
                                 <ul class="list-unstyled">
                                     <?php
                                     foreach($facet["values"] as $value)
@@ -171,7 +171,7 @@
                 </div>
                 <!-- Faceting -->
 
-                <div class="col-lg-10 col-xs-8">
+                <div class="col-lg-10 col-xs-12">
                     <?php
                     for($i=0; $i<5; $i++)
                     {
