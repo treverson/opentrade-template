@@ -120,7 +120,7 @@
 <div class="slider">
     <div id="shop_banner" class="container container-fluid">
         <div class="row">
-            <h2 class="left">nom de la boutique</h2>
+            <h2 class="shop-name">nom de la boutique</h2>
             <img id="shop_banner_logo" height="128" width="128" class="img-responsive img-circle" src="images/shop/logo.png">
         </div>
     </div>
@@ -139,14 +139,78 @@
                         </div>
                         <div id="shop_menu" class="collapse navbar-collapse navbar-ex2-collapse">
                             <ul class="nav navbar-nav">
-                                <li><a href="#">Détails de la boutique</a></li>
-                                <li><a href="#">Explorer la boutique</a></li>
-                                <li><a href="#">Contacter le vendeur</a></li>
-                                <li><a href="#">S'abonner/Se désabonner</a></li>
+                                <li><a class="btn btn-link" data-toggle="modal" data-target="#shop_description">Détails de la boutique</a></li>
+                                <li><a class="btn btn-link" data-toggle="modal" data-target="#shop_contact">Contacter le vendeur</a></li>
+                                <li><a class="btn btn-link" href="#">Explorer la boutique</a></li>
+                                <li><a class="btn btn-link" href="#">S'abonner/Se désabonner</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pour afficher la description de la boutique -->
+    <div id="shop_description" class="modal shop-description" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3>Nom de la boutique</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="fa fa-2x mg-bottom-1">
+                        Description de la boutique
+                    </div>
+                    <div>
+                        vendeur : nom et prénom du vendeur
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal pour contacter le vendeur-->
+    <div id="shop_contact" class="modal shop-description" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3>Nom de la boutique</h3>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active"> <a class="btn btn-link" data-toggle="tab" href="#contact">Contact</a></li>
+                        <li><a class="btn btn-link" data-toggle="tab"  href="#form_contact">Envoyer un message</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="contact" class="tab-pane fade in active">
+                            <h3>Contact</h3>
+                            <ul>
+                                <li>numéro de téléphone : +228 99-99-99-99-</li>
+                                <li>email : vendeur@exemple.com</li>
+                            </ul>
+                        </div>
+                        <div id="form_contact" class="tab-pane fade">
+                            <h3>Envoyer un message</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label>Objet <i style="color:red">*</i></label>
+                                    <input required class="form-control" type="text" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Message <i style="color:red">*</i></label>
+                                    <textarea required class="form-control"></textarea>
+                                </div>
+                                <div>
+                                    <input type="submit" class="btn btn-primary">
+                                    <input type="reset" class="btn btn-warning">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
