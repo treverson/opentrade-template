@@ -46,8 +46,8 @@
 }
 
 .recherche{
-    padding-top: 50px;
-    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 .header-search{
     top: 0;
@@ -112,22 +112,21 @@
     background-color: #0e8ce4;
 }
 .menu{
-    height: 100%;
-    width: 100%;
+    color: white ;
 }
 nav ul li {
     padding-right: 10px;
 }
 .navbar{
-    background-color: #a9d5fe;
+    border-radius: 0;
 }
 
 .navbar-brand{
-    font-size: 20px;
+    font-size: 15px;
     color: white;
 }
 .nav{
-    font-size: 20px;
+    font-size: 15px;
 }
 .carousel-caption {
     position: inherit;

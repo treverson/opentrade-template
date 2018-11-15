@@ -17,20 +17,16 @@
 <div class="header">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-xs-6">
+            <div class="col-md-4 col-xs-4">
                 <div class="administration">
-                    <ul>
-                        <li><a href=""><i class="fa fa-user"></i>Administration</a></li>
-                    </ul>
+                    <a class="btn btn-link" href=""><i class="fa fa-user"></i> Administration</a>
                 </div>
             </div>
 
-            <div class="col-md-8 col-xs-6">
-                <div class="connection">
-                    <ul class="list-unstyled list-inline">
-                        <li><a href="">Se Connecter</a></li>
-                        <li><a href="">S'inscrire </a></li>
-                    </ul>
+            <div class="col-md-6 col-md-offset-2 col-xs-6 col-xs-offset-2">
+                <div style="text-align: center" class="connection">
+                    <a class="btn btn-link" href="">Se connecter</a>
+                    <a class="btn btn-link" href="">S'inscrire </a>
                 </div>
             </div>
         </div>
@@ -42,40 +38,28 @@
 <div class="milieu">
     <div class="container">
         <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-4 col-xs-3">
                 <div>
                     <h1><a href=""><img src="images/shop.jpg"></a></h1>
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <a href="" class="col-md-4 col-xs-3 col-md-offset-4 col-xs-offset-6">
+                <div class="shopping-item">
+                    <div>Total : <span class="cart-amunt">1.200.000,00 CFA</span> <i class="fa fa-shopping-cart"></i><span class="product-count">5</span></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-xs-12">
                 <div class="recherche ">
                     <form role="form" name="form" action="" method="post">
-                        <div class="row">
-                            <div class="col-sm-10 col-md-push-4 ">
-                                <div class="form-group">
-                                    <input type="text" placeholder="recherche" name="s"
-                                           class="form-control left-rounded">
-                                </div>
-                            </div>
-                            <div class="col-sm-1 col-md-push-3">
-                                <div class="form-group">
-                                    <button type="submit" class="header-search" value="Submit"><img
-                                            src="images/search.png" alt=""></button>
-                                </div>
-                            </div>
-
+                        <div class="input-group">
+                            <input type="text" placeholder="recherche" name="s" class="form-control left-rounded">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
                         </div>
                     </form>
-                </div>
-            </div>
-
-            <div class="col-md-5">
-                <div class="col-sm-6">
-                    <div class="shopping-item col-lg-push-12">
-                        <a href="">Total <span class="cart-amunt">1200000 CFA</span> <i class="fa fa-shopping-cart"></i>
-                            <span class="product-count">5</span></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -89,21 +73,26 @@
 <div class="menu">
     <div class="container">
         <div class="row">
-            <nav class="navbar navbar-info" role="navigation">
+            <nav class="navbar navbar-inverse" role="navigation">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">Les catégories</a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu_categories">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
-                    <div class="collapse navbar-collapse navbar-ex2-collapse">
+                    <div id="menu_categories" class="collapse navbar-collapse navbar-ex2-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Accueil</a></li>
-                            <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Accueil</a></li>
-                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">Animalerie</a></li>
+                            <li><a href="#">Auto et Moto</a></li>
+                            <li><a href="#">Beauté et parfum</a></li>
+                            <li><a href="#">Bijoux</a></li>
+                            <li><a href="#">Sac et Chaussure</a></li>
+                            <li><a href="#">High-Tech</a></li>
+                            <li><a href="#">Jouet</a></li>
+                            <li><a href="#">Livre</a></li>
                         </ul>
                     </div>
                 </div>
