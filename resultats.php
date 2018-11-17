@@ -40,7 +40,7 @@
         <div class="row">
             <div class="col-md-4 col-xs-3">
                 <div>
-                    <h1><a href=""><img src="images/shop.jpg"></a></h1>
+                    <h1><a href=""><img width="100" height="100" class="img-circle" src="images/shop/logo.png"></a></h1>
                 </div>
             </div>
 

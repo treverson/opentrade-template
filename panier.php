@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
-    <title>Open Trade - Inscription</title>
+    <title>Open Trade - Panier</title>
 
     <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/acceuil.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.0.1/css/fontawesome-all.css">
-    <link rel="stylesheet" href="intel-tel/css/intlTelInput.min.css">
 
 
 </head>
@@ -106,90 +106,74 @@
 <!-- Fin du menu -->
 
 <!-- 1er Partie -->
-<section>
+<section class="mg-bottom-2">
     <div class="container">
         <div class="login row">
-            <h1 class="text-center title">Inscription</h1>
-
-            <div class="col-lg-6 col-lg-offset-3 col-xs-10 col-xs-offset-1">
-                <form>
-                    <div class="form-group">
-                        <label>Nom <i style="color:red;">*</i></label>
-                        <input class="form-control" type="text" name="name" required/>
+            <h1 class="text-center title">Panier</h1>
+            <?php
+                $total = 0 ;
+                $items = [
+                        [1, "Colca cola", 320, 5, 1600],
+                        [2, "Fanta Orange", 400, 4, 1600],
+                        [3, "Parle G", 50, 20, 1000],
+                        [4, "Lolait", 100, 2, 200],
+                        [5, "Blue pixi", 0, 5, 0],
+                ]
+            ?>
+            <div class="col-lg-8 col-lg-offset-2 col-xs-12">
+                <div id="basket-content" class="mg-top-2">
+                    <table class="table table-striped">
+                        <thead class="">
+                            <tr>
+                                <th>#</th>
+                                <th>libellé</th>
+                                <th>p.u.</th>
+                                <th>qté</th>
+                                <th>total</th>
+                                <th><i class="fa-trash fa"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach($items as $item)
+                            {
+                                $total += $item[4];
+                            ?>
+                                <tr>
+                                    <td><a href="#" title="voir le produit"><i class="fa fa-eye"></i></a></td>
+                                    <td><?php echo $item[1] ?></td>
+                                    <td><?php echo $item[2] ?></td>
+                                    <td><input style="width: 30px" value="<?php echo $item[3]?>" type="text" id="spinner<?php echo $item[0] ?>" </td>
+                                    <td><?php echo $item[4] ?></td>
+                                    <td><button title="supprimer" style="background: transparent; border: 0;">&times;</button></td>
+                                </tr>
+                            <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Total des produits</th>
+                                <th>Frais de transaction</th>
+                                <th>Total de la commande</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><?php echo $total;?></td>
+                                <td><?php echo $total*0.03;?></td>
+                                <td><?php echo $total*1.03;?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="col-lg-6 col-xs-12">
+                        <a title="commander le panier" class="border-squared btn btn-primary">Commander <i class="fa fa-shopping-basket"></i></a>
+                        <a class="border-squared btn btn-primary" title="enregister le panier">Enregister <i class="fab fa-dropbox"></i></a>
+                        <button class="btn btn-danger border-squared" title="vider le panier">Vider <i class="fa fa-trash"></i></button>
                     </div>
-                    <div class="form-group">
-                        <label>Prénom</label>
-                        <input class="form-control" type="text" name="surname" required/>
-                    </div>
-                    <div class="form-group">
-                        <label>Photo de profil <i style="color:red;">*</i></label>
-                        <input class="form-control" type="file" accept="image/*" name="profil" required/>
-                    </div>
-                    <div class="form-group">
-                        <label>Sexe <i style="color:red;">*</i></label>
-                        <select required name="sexe" class="form-control">
-                            <option value="m">Masculin</option>
-                            <option value="f">Féminin</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Mot de passe <i style="color:red;">*</i></label>
-                        <input class="form-control" type="password" name="password" required/>
-                    </div>
-                    <div class="form-group">
-                        <label style="display:block">Téléphone <i style="color:red;">*</i></label>
-                        <!--<span class="input-group-addon">Tel</span>-->
-                        <input id="phone" class="form-control" type="tel" name="phone" required/>
-                    </div>
-                    <div class="form-group">
-                        <label>Email <i style="color:red;">*</i></label>
-                        <input class="form-control" type="email" name="email" required/>
-                    </div>
-                    <div class="form-group">
-                        <label>Adresse <i style="color:red;">*</i></label>
-                        <div class="row">
-                            <div class="col-sm-10 col-xs-10">
-                                <input id="address" class="form-control" type="text" name="address" required/>
-                            </div>
-                            <div class="col-sm-2 col-xs-2">
-                                <button data-toggle="modal" data-target="#address_modal" title="géolocaliser" type="button" class="btn btn-link"><i class="glyphicon glyphicon-globe"></i></button>
-                                <div role="dialog" id="address_modal" class="modal">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button data-dismiss="modal" type="button" class="close">&times;</button>
-                                                <h2>Géolocalisation</h2>
-                                            </div>
-                                            <div class="modal-body">
-                                                <button id="address_ok" type="button" data-dismiss="modal" class="btn btn-primary">Valider</button>
-                                                <button id="address_no" type="button" data-dismiss="modal" class="btn btn-warning">Annuler</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <p>
-                            J'ai pris connaissance des <a href="" title="conditions d'utilisations" target="_blank">conditions d'utilisations</a> de Open Trade et je les accepte sans conditions ou restictions.
-                            <input class="checkbox" type="checkbox" name="cgu" id="cgu">
-                        </p>
-                    </div>
-                    <div id="social_signin" class="form-group">
-                        <div class="row">
-                            <div class="col-lg-6 col-xs-12">
-                                <a class="btn btn-primary mg-top-1">Complèter avec Facebook <i class="fab fa-facebook-square"></i></a>
-                            </div>
-                            <div class="col-lg-6 col-xs-12">
-                                <a class="btn btn-danger mg-top-1">Complèter avec Google <i class="fab fa-google-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <button id="submit" disabled type="submit" class="btn btn-primary">S'inscire</button>
-                    <button type="reset" class="btn btn-warning">Effacer</button>
-                    <p class="text-nowrap left mg-top-3">Déjà inscrit ?<a class="btn btn-link" href="#" title="se connecter">Connectez-vous</a>!</p>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -294,49 +278,17 @@
 <script src="js/jquery.scrollUp.min.js"></script>
 <script src="js/price-range.js"></script>
 <script src="js/acceuil.js"></script>
-<script src="intel-tel/js/intlTelInput.js"></script>
-<script type="text/javascript">
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
 
-    $(function () {
-        /* cgu */
-        $("#cgu").change('click', function (ev) {
+<?php
+foreach($items as $item)
+{?>
+    <script type="text/javascript">
+        $( "#spinner<?php echo $item[0] ?>" ).spinner();
+    </script>
+<?php
+}
+?>
 
-            if(ev.target.checked)
-            {
-                $("#submit").attr("disabled", false) ;
-            }else
-            {
-                $("#submit").attr("disabled", true) ;
-            }
-        }) ;
-
-        /* Inteernational phone code */
-        var input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            allowDropdown: true,
-            autoHideDialCode: false,
-            autoPlaceholder: "on",
-            // dropdownContainer: document.body,
-            // excludeCountries: ["us"],
-            // formatOnDisplay: false,
-            // geoIpLookup: function(callback) {
-            //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-            //     var countryCode = (resp && resp.country) ? resp.country : "";
-            //     callback(countryCode);
-            //   });
-            // },
-            hiddenInput: "full_number",
-            initialCountry: "tg",
-            // localizedCountries: { 'de': 'Deutschland' },
-            nationalMode: true,
-            onlyCountries: [/*'bj',*/ 'tg'],
-            placeholderNumberType: "MOBILE",
-            // preferredCountries: ['cn', 'jp'],
-            separateDialCode: true,
-            utilsScript: "intel-tel/js/utils.js"
-        });
-    }) ;
-
-</script>
 </body>
 </html>

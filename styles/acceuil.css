@@ -804,6 +804,40 @@ a#scrollUp i{
     font-size: 30px;
 }
 
+/* Margin */
 
+.mg-top-1{
+    margin-top: 10px;
+}
+.mg-top-2{
+    margin-top: 20px;
+}
+.mg-top-3{
+    margin-top: 30px;
+}
+.mg-top-4{
+    margin-top: 40px;
+}
+.mg-top-5{
+    margin-top: 50px;
+}
 
+.mg-bottom-1{
+    margin-bottom: 10px;
+}
+.mg-bottom-2{
+    margin-bottom: 20px;
+}
+.mg-bottom-3{
+    margin-bottom: 30px;
+}
+.mg-bottom-4{
+    margin-bottom: 40px;
+}
+.mg-bottom-5{
+    margin-bottom: 50px;
+}
 
+.border-squared {
+    border-radius : 0;
+}
