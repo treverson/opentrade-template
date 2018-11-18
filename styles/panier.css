@@ -1,0 +1,11 @@
+.order-progress
+{
+    border: 1px double lightgray;
+    color: #2b2b2b;
+    background-color: transparent;
+    padding: 10px;
+}
+.order-progress-active
+{
+    color: #c9302c;
+}

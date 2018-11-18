@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/acceuil.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/panier.css">
     <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="fontawesome-free-5.0.1/css/fontawesome-all.css">
 
@@ -121,6 +122,17 @@
                 ]
             ?>
             <div class="col-lg-8 col-lg-offset-2 col-xs-12">
+                <div class="menu">
+                    <nav class="navbar">
+                        <ul class="nav navbar-nav">
+                            <li><a class="order-progress-active order-progress"">1. Mon panier</a></li>
+                            <li><a class="order-progress"">2. Coordonnées de livraison</a></li>
+                            <li><a class="order-progress">3. Récapitulatif</a></li>
+                            <li><a class="order-progress">4. Paiement</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
                 <div id="basket-content" class="mg-top-2">
                     <table class="table table-striped">
                         <thead class="">
