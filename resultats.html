@@ -112,81 +112,130 @@
                 <h2 class="title">Résultats de la recherche : 551 produits trouvés</h2>
 
                 <div class="col-lg-2 col-xs-12">
-                    <?php
-                    $facets = [
-                        [
-                            "name"=>"Categories",
-                            "values"=>[
-                                ["aliments et boissons", 5],
-                                ["chaussures et vêtements",10],
-                                ["jardinage",3],
-                                ["puériculture",8],
-                            ]
-                        ] ,
-                        [
-                            "name"=>"Vendeurs",
-                            "values"=>[
-                                ["jordy fatigba",5],
-                                ["ethiel adiassa",15],
-                                ["barry thierno",8],
-                            ]
-                        ]
-                    ];
-                    foreach($facets as $facet)
-                    {
-                        ?>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <?php echo $facet['name'] ;  ?>
-                            </div>
-                            <div class="text-center panel-body">
-                                <ul class="list-unstyled">
-                                    <?php
-                                    foreach($facet["values"] as $value)
-                                    {
-                                        ?>
-                                        <li class="active">
-                                            <a title="<?php echo $value[0]; ?>" href="#"><?php echo $value[0]; ?> <i class="badge"><?php echo $value[1]; ?></i></a>
-                                        </li>
-                                        <?php
-                                    }
-                                    ?>
-                                </ul>
-                            </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Catégories
                         </div>
-                        <?php
-                    }
-                    ?>
+                        <div class="text-center panel-body">
+                            <ul class="list-unstyled">
+                                <li class="active">
+                                    <a title="aliments et boissons" href="#"> aliments et boissons <i class="badge">5</i></a>
+                                </li>
+                                <li>
+                                    <a title="chaussures et vêtements" href="#"> chaussures et vêtements <i class="badge">10</i></a>
+                                </li>
+                                <li>
+                                    <a title="jardinage" href="#"> jardinage <i class="badge">3</i></a>
+                                </li>
+                                <li>
+                                    <a title="puériculture" href="#"> puériculture <i class="badge">5</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Vendeurs
+                        </div>
+                        <div class="text-center panel-body">
+                            <ul class="list-unstyled">
+                                <li class="active">
+                                    <a title="jordy fatigba" href="#"> jordy fatigba <i class="badge">5</i></a>
+                                </li>
+                                <li>
+                                    <a title="ethiel adiassa" href="#"> ethiel adiassa <i class="badge">10</i></a>
+                                </li>
+                                <li>
+                                    <a title="barry thierno" href="#"> barry thierno <i class="badge">3</i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <!-- Faceting -->
 
                 <div class="col-lg-10 col-xs-12">
-                    <?php
-                    for($i=0; $i<5; $i++)
-                    {
-                    ?>
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/recommend1.jpg" alt=""/>
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
 
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/recommend1.jpg" alt=""/>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                             </div>
                         </div>
-                    <?php
-                    }
-                    ?>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/recommend1.jpg" alt=""/>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/recommend1.jpg" alt=""/>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/recommend1.jpg" alt=""/>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/recommend1.jpg" alt=""/>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/recommend1.jpg" alt=""/>
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-lg-12 col-xs-12">
                         <div class="text-center">
                             <a class="btn btn-default add-to-cart">Voir plus</a>
                         </div>
                     </div>
                 </div>
+
             </div><!--/recommended_items-->
         </div>
     </div>

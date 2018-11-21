@@ -111,21 +111,11 @@
     <div class="container">
         <div class="login row">
             <h1 class="text-center title">Panier</h1>
-            <?php
-                $total = 0 ;
-                $items = [
-                        [1, "Colca cola", 320, 5, 1600],
-                        [2, "Fanta Orange", 400, 4, 1600],
-                        [3, "Parle G", 50, 20, 1000],
-                        [4, "Lolait", 100, 2, 200],
-                        [5, "Blue pixi", 0, 5, 0],
-                ]
-            ?>
             <div class="col-lg-8 col-lg-offset-2 col-xs-12">
                 <div class="menu">
                     <nav class="navbar">
                         <ul class="nav navbar-nav">
-                            <li><a class="order-progress-active order-progress"">1. Mon panier</a></li>
+                            <li><a class="order-progress-active order-progress">1. Mon panier</a></li>
                             <li><a class="order-progress"">2. Coordonnées de livraison</a></li>
                             <li><a class="order-progress">3. Récapitulatif</a></li>
                             <li><a class="order-progress">4. Paiement</a></li>
@@ -146,22 +136,38 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            foreach($items as $item)
-                            {
-                                $total += $item[4];
-                            ?>
-                                <tr>
-                                    <td><a href="#" title="voir le produit"><i class="fa fa-eye"></i></a></td>
-                                    <td><?php echo $item[1] ?></td>
-                                    <td><?php echo $item[2] ?></td>
-                                    <td><input style="width: 30px" value="<?php echo $item[3]?>" type="text" id="spinner<?php echo $item[0] ?>" </td>
-                                    <td><?php echo $item[4] ?></td>
-                                    <td><button title="supprimer" style="background: transparent; border: 0;">&times;</button></td>
-                                </tr>
-                            <?php
-                            }
-                            ?>
+                            <tr>
+                                <td><a href="#" title="voir le produit"><i class="fa fa-eye"></i></a></td>
+                                <td>Coca cola</td>
+                                <td>320</td>
+                                <td><input style="width: 30px" value="4" type="text" id="spinner1"/></td>
+                                <td>1600</td>
+                                <td><button title="supprimer" style="background: transparent; border: 0;">&times;</button></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" title="voir le produit"><i class="fa fa-eye"></i></a></td>
+                                <td>Fanta orange</td>
+                                <td>400</td>
+                                <td><input style="width: 30px" value="4" type="text" id="spinner2"/></td>
+                                <td>1600</td>
+                                <td><button title="supprimer" style="background: transparent; border: 0;">&times;</button></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" title="voir le produit"><i class="fa fa-eye"></i></a></td>
+                                <td>Parle G</td>
+                                <td>50</td>
+                                <td><input style="width: 30px" value="20" type="text" id="spinner3"/></td>
+                                <td>1000</td>
+                                <td><button title="supprimer" style="background: transparent; border: 0;">&times;</button></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" title="voir le produit"><i class="fa fa-eye"></i></a></td>
+                                <td>Lolait</td>
+                                <td>100</td>
+                                <td><input style="width: 30px" value="2" type="text" id="spinner4"/></td>
+                                <td>200</td>
+                                <td><button title="supprimer" style="background: transparent; border: 0;">&times;</button></td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-striped">
@@ -174,9 +180,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><?php echo $total;?></td>
-                                <td><?php echo $total*0.03;?></td>
-                                <td><?php echo $total*1.03;?></td>
+                                <td>10000 FCFA</td>
+                                <td>300 FCFA</td>
+                                <td>10300 FCFA</td>
                             </tr>
                         </tbody>
                     </table>
@@ -292,15 +298,14 @@
 <script src="js/acceuil.js"></script>
 <script src="js/jquery-ui/jquery-ui.min.js"></script>
 
-<?php
-foreach($items as $item)
-{?>
-    <script type="text/javascript">
-        $( "#spinner<?php echo $item[0] ?>" ).spinner();
-    </script>
-<?php
-}
-?>
+
+<script type="text/javascript">
+    $( "#spinner1" ).spinner();
+    $( "#spinner2" ).spinner();
+    $( "#spinner3" ).spinner();
+    $( "#spinner4" ).spinner();
+    $( "#spinner5" ).spinner();
+</script>
 
 </body>
 </html>
