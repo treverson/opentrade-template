@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
     <title>Open Trade - LDLC PC Bellone</title>
 
     <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/acceuil.css">
-    <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/produit.css">
     <link rel="stylesheet" href="fontawesome-free-5.0.1/css/fontawesome-all.css">
     <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
@@ -110,11 +111,12 @@
 <section>
     <div class="container">
         <div class="mg-bottom-3 row">
-            <div class="col-lg-6 col-xs-12">
-                <div class="product">
-                    <h3 class="product-wording">LDLC PC BELLONE</h3>
+            <!-- Le produit -->
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="product-info">
+                    <h2 class="product-wording">LDLC PC BELLONE</h2>
                     <span class="product-owner">Vendu par <a href="#" title="Boutique LDLC" target="_blank">La Boutique LDLC</a></span>
-                    <img class="product-img img-responsive" src="images/shop/tecno-cx-miaplenou.jpg">
+                    <img class="product-img img-responsive" alt="LDLC PC BELLONE vendu par La Boutique LDLC" title="LDLC PC BELLONE" src="images/shop/tecno-cx-miaplenou.jpg">
                     <div class="product-info">
                         <p class="text-justify mg-top-1">
                             Reconnaitre une lettre, un caractère, un mot ou une phrase semble aisé pour une homme, notre cerveau composé de près de 100 Milliards de neurone peuts bien éffectuer ce travail en une fraction de seconde. Mais pour un automate cette tâche semble impossible du fait de la complexité du problème.
@@ -123,77 +125,208 @@
                         </p>
                         <table class="table">
                             <thead>
-                                <tr>
-                                    <th>Prix</th>
-                                    <th>État</th>
-                                    <th>Disponibilité</th>
-                                </tr>
+                            <tr>
+                                <th>Prix</th>
+                                <th>État</th>
+                                <th>Disponibilité</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                   <td>2510 FCFA</td>
-                                   <td>Neuf</td>
-                                   <td>5</td>
-                                </tr>
+                            <tr>
+                                <td>2500 FCFA</td>
+                                <td>Neuf</td>
+                                <td>5</td>
+                            </tr>
                             </tbody>
                         </table>
-                        <form>
-                            <div class="input-group">
-                                <span type="button" class="input-group-addon btn btn-primary border-squared" >Ajouter au panier</span>
-                                <input class="form-control" name="quantity" type="number" id="quantity" value="1" min="1"/>
-                                <input type="number" hidden name="product-quantity" id="product-quantity">
+                        <form id="product-form" method="post">
+                            <div class="form-group form-inline">
+                                <input type="submit" class="btn btn-primary border-squared" value="Ajouter au panier"/>
+                                <input class="form-control" required name="quantity" type="number" value="1" min="1"/>
+                                <input hidden required name="price" type="number" value="2500"/>
                             </div>
                         </form>
                     </div>
                 </div>
                 <hr/>
-                <div>
-                    Partager sur les Réseaux sociaux
-                    <div class="mg-top-1">
-                        <a href="#" title="partager sur facebook" class="btn btn-primary border-squared"><i class="fab fa-facebook"></i></a>
-                        <a href="#" title="partager sur whatsapp" class="btn btn-success border-squared"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" title="partager sur telegram" class="btn btn-primary border-squared"><i class="fab fa-telegram"></i></a>
-                        <a href="#" title="partager via e-mail" class="btn btn-warning border-squared"><i class="fa fa-envelope"></i></a>
-                        <a href="#" title="copier le lien" class="btn btn-default border-squared"><i class="fa fa-share"></i></a>
-                    </div>
+                <h4>Partager sur les Réseaux sociaux</h4>
+                <div class="mg-top-1">
+                    <a href="#" title="partager sur facebook" class="btn btn-primary border-squared"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="partager sur whatsapp" class="btn btn-success border-squared"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="partager sur telegram" class="btn btn-primary border-squared"><i class="fab fa-telegram"></i></a>
+                    <a href="#" title="partager via e-mail" class="btn btn-warning border-squared"><i class="fa fa-envelope"></i></a>
+                    <a href="#" title="copier le lien" class="btn btn-default border-squared"><i class="fa fa-share"></i></a>
                 </div>
                 <hr/>
-                <div>
-                    <div>
-                        <h4>Commenter</h4>
-                        <form id="product-comment-form">
-                            <input class="form-control border-squared" type="text" placeholder="saisir un commentaire" required name="comment_text" />
-                        </form>
-                        <hr/>
-                        <h4>Commentaires précédents</h4>
-                        <div class="comments-box">
-                            <div class="comment-unit mg-bottom-1">
-                                Posté par <a href="#" title="Fréjus">Fréjus </a><i class="fa fa-user"></i> <span style="float:right;">le 25 avr. 2018 à 12:56 <i class="glyphicon glyphicon-calendar"></i></span>
-                                <p>
-                                    Ceci est un commentaire
-                                </p>
-                            </div>
-                            <div class="comment-unit mg-bottom-1">
-                                Posté par <a href="#" title="Fréjus">Fréjus </a><i class="fa fa-user"></i> <span style="float:right;">le 25 avr. 2018 à 12:56 <i class="glyphicon glyphicon-calendar"></i></span>
-                                <p>
-                                    Ceci est un commentaire
-                                </p>
-                            </div>
-                            <div class="comment-unit mg-bottom-1">
-                                Posté par <a href="#" title="Fréjus">Fréjus </a><i class="fa fa-user"></i> <span style="float:right;">le 25 avr. 2018 à 12:56 <i class="glyphicon glyphicon-calendar"></i></span>
-                                <p>
-                                    Ceci est un commentaire
-                                </p>
+                <div class="comments">
+                    <h4>Commenter</h4>
+                    <form id="product-comment-form">
+                        <input class="form-control border-squared" type="text" placeholder="saisir un commentaire" required name="comment_text" />
+                    </form>
+                    <hr/>
+                    <!-- A récupérer dynamiquement en AJAX depuis le ws -->
+                    <h4>Commentaires précédents</h4>
+                    <div class="comments-box">
+                        <div class="comment-unit mg-bottom-1">
+                            Posté par <a href="#" title="Fréjus">Fréjus </a><i class="fa fa-user"></i> <span style="float:right;">le 25 avr. 2018 à 12:56 <i class="glyphicon glyphicon-calendar"></i></span>
+                            <p>
+                                Ceci est un commentaire
+                            </p>
+                        </div>
+                        <div class="comment-unit mg-bottom-1">
+                            Posté par <a href="#" title="Fréjus">Fréjus </a><i class="fa fa-user"></i> <span style="float:right;">le 25 avr. 2018 à 12:56 <i class="glyphicon glyphicon-calendar"></i></span>
+                            <p>
+                                Ceci est un commentaire
+                            </p>
+                        </div>
+                        <div class="comment-unit mg-bottom-1">
+                            Posté par <a href="#" title="Fréjus">Fréjus </a><i class="fa fa-user"></i> <span style="float:right;">le 25 avr. 2018 à 12:56 <i class="glyphicon glyphicon-calendar"></i></span>
+                            <p>
+                                Ceci est un commentaire
+                            </p>
+                        </div>
+                        <!-- Loader -->
+                        <div id="spinner" class="hidden text-center">
+                            <i style="margin-bottom: 20%;" class="fa fa-3x fa-spin fa-spinner"></i>
+                        </div>
+                        <button class="btn btn-default">Plus de commentaires</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Les recommandations -->
+            <div class="col-lg-4 col-md-4 col-md-offset-1 col-lg-offset-1 col-xs-8 col-xs-offset-2">
+                <!--similar_items-->
+                <!-- A récupérer dynamiquement en AJAX depuis le ws -->
+                <div class="mg-top-3 recommended_items"><!--recommended_items-->
+                    <h3 class="title text-center mg-bottom-3">Dans la même catégorie</h3>
+                    <div id="recommended-item-carousel" class="slide">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-            <div class="col-lg-4 col-xs-12">
-
+                <!--recommended_items-->
+                <!-- A récupérer dynamiquement en AJAX depuis le ws -->
+                <div class="mg-top-3 recommended_items">
+                    <h3 class="title text-center mg-bottom-3">Recommandations</h3>
+                    <div id="new-item-carousel" class="slide" data-ride="">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="product-image-wrapper">
+                                        <div class="single-products">
+                                            <div class="productinfo text-center">
+                                                <img src="images/home/recommend3.jpg" alt=""/>
+                                                <h2>$56</h2>
+                                                <p>Easy Polo Black Edition</p>
+                                                <a href="#" class="btn btn-default"><i class="fa fa-eye"></i> Voir</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/recommended_items-->
             </div>
         </div>
+        <!-- Détails de livraison -->
+        <div class="mg-bottom-5 mg-top-5 row">
+            <!--<div class="delivery col-lg-4 col-xs-12 col-md-12">
+                Livraison à domicile à partir de 200 FCFA <img alt="livraison à domicile avec Open Trade" src="images/delivery.png">
+            </div>
+            <div class="delivery col-lg-4 col-xs-12 col-md-12">
+                Livraison gratuite dans les coins colis <img alt="livraison dans un coin colis avec Open Trade" src="images/delivery.png">
+            </div>
+            <div class="delivery col-lg-4 col-xs-12 col-md-12">
+                Livraison gratuite à partir de 1000 FCFA d'achat <img alt="livraison gratuite avec Open Trade" src="images/delivery.png">
+            </div>
+        </div>-->
     </div>
 </section>
 
