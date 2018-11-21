@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
-    <title>Accueil</title>
 
+    <title>Open Trade - Lova Boutique</title>
     <link rel="stylesheet" href="styles/bootstrap.css">
     <link rel="stylesheet" href="styles/acceuil.css">
     <link rel="stylesheet" href="styles/shopinfo.css">
     <link rel="stylesheet" href="fontawesome-free-5.0.1/css/fontawesome-all.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
 
 
 </head>
@@ -130,8 +131,10 @@
                             <ul class="nav navbar-nav">
                                 <li><a class="btn btn-link" data-toggle="modal" data-target="#shop_description">Détails de la boutique</a></li>
                                 <li><a class="btn btn-link" data-toggle="modal" data-target="#shop_contact">Contacter le vendeur</a></li>
-                                <li><a class="btn btn-link" href="#">Explorer la boutique</a></li>
+                                <li><a class="btn btn-link" onclick="explore()">Explorer la boutique</a></li>
                                 <li><a class="btn btn-link" href="#">S'abonner/Se désabonner</a></li>
+                                <li><a class="btn btn-link" title="rechercher" data-toggle="collapse" data-target="#filter">Rechercher</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -208,12 +211,66 @@
 <!-- Fin des sliders -->
 
 <!-- 1er Partie -->
-<section>
+<section id="shop_items">
     <div class="container">
-        <div class="row">
+        <div class="collapse" id="filter">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Rechercher dans la boutique Lova Boutique</div>
+                        <div class="panel-body">
+                            <form id="filter_form">
+                                <div class="form-group">
+                                    <label>
+                                        Prix : <input disabled style="display:inline; border:0; font-weight:bold;" class="form-control" type="text" id="amount">
+                                    </label>
+                                    <div id="slider-range">
+
+                                    </div>
+                                    <input id="min-price_input" hidden value="0" name="min_price" type="number"/>
+                                    <input id="max-price_input" hidden value="1000" name="max_price" type="number"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>En promotion</label>
+                                    <input id="filter_promotion_input" name="promotion" type="checkbox"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Etat du produit</label>
+                                    <select class="form-control" name="state">
+                                        <option value=""></option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mots clés</label>
+                                    <input placeholder="saisissez des mots clés" name="keyword" type="text" required class="form-control" />
+                                </div>
+                                <input type="submit" value="rechercher" class="btn btn-primary" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin: auto; width: 50%; z-index: 1;">
+            <div id="spinner" class="hidden text-center">
+                <i style="margin-bottom: 20%;" class="fa fa-3x fa-spin fa-spinner"></i>
+            </div>
+        </div>
+
+        <div id="shop_items_row" class="row">
             <div class="recommended_items"><!--recommended_items-->
                 <h2 class="title text-center">Promotions</h2>
-
                 <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="item active">
@@ -225,7 +282,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -239,7 +296,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -253,7 +310,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -269,7 +326,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -283,7 +340,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -297,7 +354,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -329,7 +386,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -388,7 +445,7 @@
                                             <h2>$56</h2>
                                             <p>Easy Polo Black Edition</p>
                                             <a href="#" class="btn btn-default add-to-cart"><i
-                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
 
                                     </div>
@@ -409,7 +466,7 @@
                 <img class="intermediaire" src="images/Early%20Christmas%20Treat.jpg" alt="Inscription">
             </div>
 
-            <div class="col-md-12 padding-right">
+            <div class="col-lg-12 padding-right">
                 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">Les produits</h2>
                     <div class="col-sm-4">
@@ -605,7 +662,7 @@
                                                 <h2>$56</h2>
                                                 <p>Easy Polo Black Edition</p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                            class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
 
                                         </div>
@@ -649,7 +706,7 @@
                                                 <h2>$56</h2>
                                                 <p>Easy Polo Black Edition</p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                            class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
 
                                         </div>
@@ -663,7 +720,7 @@
                                                 <h2>$56</h2>
                                                 <p>Easy Polo Black Edition</p>
                                                 <a href="#" class="btn btn-default add-to-cart"><i
-                                                        class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                            class="fa fa-shopping-cart"></i>Add to cart</a>
                                             </div>
 
                                         </div>
@@ -784,6 +841,63 @@
 <script src="js/jquery.scrollUp.min.js"></script>
 <script src="js/price-range.js"></script>
 <script src="js/acceuil.js"></script>
+<script src="js/jquery-ui/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+    /* slider */
+    $( function() {
+        var max_price = $("#max-price_input");
+        var min_price = $("#min-price_input");
+        var slider = $( "#slider-range" ) ;
+        slider.slider({
+            range: true,
+            min: 0,
+            max: 100000,
+            values: [ 0, 1000 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val(ui.values[ 0 ] + " FCFA - " + ui.values[ 1 ] +" FCFA" );
+                min_price.attr("value", ui.values[ 0 ] ) ;
+                max_price.attr("value", ui.values[ 1 ] ) ;
+                console.log("max "+max_price.val()) ;
+                console.log("min "+min_price.val()) ;
+            }
+        });
+        $( "#amount" ).val( slider.slider( "values", 0 )+" FCFA " + slider.slider( "values", 1 ) +" FCFA" );
+    } );
+    /* explorer la boutique (afficher tout les produits) */
+    function explore()
+    {
+        $("#shop_items").find("#shop_items_row").fadeIn(400).html("").addClass("hidden") ;
+        $("#spinner").removeClass("hidden") ;
+        var i = 0;
+        for(i=0; i<20; i++)
+        {
+            var lv1 = $('<div></div>').addClass("col-sm-3") ;
+            var lv2 = $('<div></div>').addClass("product-image-wrapper") ;
+            var lv3 = $('<div></div>').addClass("single-products") ;
+            var lv4 = $('<div></div>').addClass("productinfo text-center") ;
+            var img = $('<img/>').attr('src', "images/home/recommend1.jpg") ;
+            var title = $('<h2></h2>').text('$56') ;
+            var paragraphe = $('<p></p>').text('Easy Polo Black Edition') ;
+            var link = $('<a></a>').addClass('btn btn-default add-to-cart').text("Add to cart") ;
+            var linkDecoration = $('<i></i>').addClass('fa fa-shopping-cart') ;
+            link.append(linkDecoration) ;
+            lv4.append(img).append(title).append(link).append(paragraphe) ;
+            lv3.append(lv4) ;
+            lv2.append(lv3) ;
+            lv1.append(lv2) ;
+            $("#shop_items").find("#shop_items_row").append(lv1) ;
+        }
+        setTimeout(function () {
+            $("#shop_items").find("#shop_items_row").removeClass("hidden") ;
+            $("#spinner").addClass("hidden") ;
+        }, 800) ;
+    }
+    /* Formulaire de filtre */
+    $("#filter_form").submit(function (event) {
+        event.preventDefault() ;
+    }) ;
+</script>
 
 </body>
 </html>
